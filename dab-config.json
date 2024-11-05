@@ -2,7 +2,7 @@
   "$schema": "https://github.com/Azure/data-api-builder/releases/download/v1.1.7/dab.draft.schema.json",
   "data-source": {
     "database-type": "mssql",
-    "connection-string": "Data Source=10.18.177.147,1433;Initial Catalog=Dev;User ID=Dev;Password=Parolata;TrustServerCertificate=true",
+    "connection-string": "Data Source=10.11.111.111,1433;Initial Catalog=Dev;User ID=Dev;Password=Parolata;TrustServerCertificate=true",
     "options": {
       "set-session-context": false
     }
@@ -32,14 +32,14 @@
   "entities": {
     "MerchantData": {
       "source": {
-        "object": "ATOS.MerchantData",
+        "object": "dbo.Data",
         "type": "table"
       },
       "graphql": {
         "enabled": true,
         "type": {
-          "singular": "MerchantData",
-          "plural": "MerchantDatas"
+          "singular": "Data",
+          "plural": "Datas"
         }
       },
       "rest": {
@@ -58,14 +58,14 @@
     },
     "BankAccount": {
       "source": {
-        "object": "Accounting.BankAccounts",
+        "object": "dbo.Users",
         "type": "table"
       },
       "graphql": {
         "enabled": true,
         "type": {
-          "singular": "BankAccount",
-          "plural": "BankAccounts"
+          "singular": "User",
+          "plural": "Users"
         }
       },
       "rest": {
